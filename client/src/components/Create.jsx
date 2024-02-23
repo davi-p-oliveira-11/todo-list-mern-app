@@ -1,6 +1,9 @@
 const Create = () => {
   return (
-    <div>Create</div>
+    <div>
+      <input type="text" name="" id="" />
+      <button type="button">Add</button>
+    </div>
   )
 }
 
