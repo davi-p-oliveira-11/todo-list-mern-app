@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Create from './Create'
 
 const Home = () => {
 
   const [todos, setTodos] = useState([])
+  useEffect(() => {
+     axios.get('mongodb+srv://dpodev11:baba-0110@cluster0.7cizlg2.mongodb.net/')
+     .then(result => setTodos(result.data))
+     .catch(err => console.log(err))
+  }, [])
 
   return (
     <div>
